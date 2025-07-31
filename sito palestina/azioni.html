@@ -1,0 +1,249 @@
+<!DOCTYPE HTML>
+<html lang="it">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Azioni del gruppo - Palestina Libera Garfagnana</title>
+    <style>
+        /* Reset base */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f4;
+            color: #222;
+            line-height: 1.6;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(to right, #000000, #ce1126, #007a3d);
+            color: white;
+            padding: 1.8em 2em;
+            text-align: center;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+            user-select: none;
+        }
+        header h1 {
+            font-size: 2.2em;
+            font-weight: bold;
+            margin-bottom: 0.3em;
+            text-shadow: 1.5px 1.5px 4px rgba(0,0,0,0.7);
+        }
+        header p {
+            font-weight: 500;
+            font-size: 1.1em;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+        }
+
+        /* Navigation */
+        nav {
+            background-color: black;
+            padding: 1em 0;
+            box-shadow: inset 0 -3px 6px rgba(255,255,255,0.1);
+        }
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        nav li {
+            margin: 0;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1em;
+            padding: 0.3em 0.7em;
+            border-radius: 4px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        nav a:hover,
+        nav a:focus {
+            background-color: #ce1126;
+            color: white;
+            outline: none;
+        }
+
+        /* Main content */
+        main {
+            flex-grow: 1;
+            max-width: 900px;
+            margin: 2.5em auto;
+            padding: 0 1em;
+        }
+        main section h2 {
+            font-size: 2.4em;
+            margin-bottom: 1em;
+            color: #333;
+            text-align: center;
+        }
+
+        /* Event cards */
+        .event {
+            background: #fff;
+            padding: 1.5rem 1.8rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+            box-shadow: 0 3px 7px rgba(0,0,0,0.1);
+            border-left: 6px solid #ce1126;
+        }
+        .event h3 {
+            margin-bottom: 0.4em;
+            color: #000;
+        }
+        .event p {
+            margin-bottom: 0.7em;
+            color: #444;
+        }
+        .event a {
+            color: #ce1126;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .event a:hover,
+        .event a:focus {
+            text-decoration: underline;
+        }
+
+        /* Gallery grid */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        .gallery img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            transition: transform 0.3s ease;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+        }
+        .gallery img:hover,
+        .gallery img:focus {
+            transform: scale(1.03);
+            outline: none;
+        }
+
+        /* Post block */
+        .post {
+            background: #fff;
+            padding: 1.8rem 2rem;
+            border-radius: 10px;
+            box-shadow: 0 3px 7px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+            color: #222;
+            line-height: 1.5;
+        }
+        .post strong {
+            color: #ce1126;
+            font-weight: 700;
+        }
+        .instagram-embed a {
+            color: #0073e6;
+            font-weight: 600;
+            text-decoration: none;
+        }
+        .instagram-embed a:hover,
+        .instagram-embed a:focus {
+            text-decoration: underline;
+            outline: none;
+        }
+
+        /* Footer */
+        footer {
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 1.3em 1em;
+            font-size: 0.9em;
+            user-select: none;
+            margin-top: auto;
+            box-shadow: inset 0 3px 6px rgba(255,255,255,0.1);
+        }
+
+        /* Responsive tweaks */
+        @media (max-width: 600px) {
+            nav ul {
+                gap: 15px;
+            }
+            main {
+                margin: 1.5em auto;
+            }
+            .event, .post {
+                padding: 1.2rem 1.3rem;
+            }
+            header h1 {
+                font-size: 1.8em;
+            }
+            main section h2 {
+                font-size: 1.8em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Palestina Libera Garfagnana</h1>
+        <p>Le nostre iniziative e azioni</p>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="chi-siamo.html">Chi Siamo</a></li>
+            <li><a href="azioni-del-gruppo.html">Azioni del gruppo</a></li>
+            <li><a href="contatti.html">Contatti</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section>
+            <h2>Azioni del gruppo</h2>
+
+            <div class="event">
+                <h3>Manifestazione per la pace</h3>
+                <p><strong>- Piazza della Repubblica, Castelnuovo di Garfagnana</strong></p>
+                <p>Abbiamo marciato insieme a oltre 500 persone per evidenziare l'atrocità che avvengono a Gaza.</p>
+                <p>La manifestazione è stata anche riportata da La Nazione: <a href="https://www.lanazione.it/lucca/cronaca/corteo-con-500-persone-c22b1709" target="_blank" rel="noopener noreferrer">Leggi l'articolo</a></p>
+                <div class="gallery">
+                    <img src="C:\Users\keonig\Downloads\Manifestazione+Watermark.jpg" alt="Manifestazione per la Palestina" />
+                    <p>Fotografo(instagram)=lucas._.photo_</p>
+                </div>
+            </div>
+            
+            <div class="event">
+                <p><strong>-Piazza carli, Castelnuovo di Garfagnana</strong></p>
+                <p> Abbiamo creato un'installazione educativa per insegnare a persone di tutte l'età cosa sta succedendo in <strong> palestina </strong></p>
+                <p> L'installazione, anche se è stata danneggiata dalla pioggia, e successivamente ricostruita, è sempre lì, pronta a aiutre le persone ad aprire gli occhi</p>
+                <p>La installazione è stata riportata da Lucca News 24: <a href="https://www.luccanews24.it/2025/07/castelnuovo-di-garfagnana-un-pupazzo-per-la-palestina/" target="_blank" rel="noopener noreferrer">Leggi l'articolo</a></p>
+                <div class="gallery">
+                    <img src="C:\Users\keonig\Documents\sito palestina\assets\immagine per palestina (installazione).jpg" alt="Installazione educativa in piazza Carli" />
+                </div>
+            </div>
+            
+            <div class="event">
+                <p><strong> -Castelnuovo di Garfagnana</strong></p>
+                <p>Abbiamo Aderito all'evento nazionale <strong> disertiamo il silenzio</strong></p>
+                <p>L'evento è stato riportato da Lucca News 24: <a href="https://www.luccanews24.it/2025/07/palestina-libera-aderisce-a-disertiamo-il-silenzio/" target="_blank" rel="noopener noreferrer">Leggi l'articolo</a></p>
+                <div class="gallery">
+                    <img src="C:\Users\keonig\Documents\sito palestina\assets\foto palestina 27 .jpg" alt="Disertiamo il silenzio" />
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>Sito sviluppato da Thomas van Arkel (thomasvanarkel00@gmail.com)</p>
+    </footer>
+</body>
+</html>

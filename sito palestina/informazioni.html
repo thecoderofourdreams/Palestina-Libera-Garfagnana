@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage - Sito Palestina</title>
+    <link rel="stylesheet" href="assets/style.css">
+    <style>
+        /* Stili specifici per mantenere il contenuto originale */
+        .original-content {
+            background: rgba(255, 245, 245, 0.9);
+            border-left: 4px solid var(--pal-red);
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .original-content p {
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+        
+        .original-content ul {
+            padding-left: 2rem;
+            margin: 1.5rem 0;
+        }
+        
+        .original-content li {
+            margin-bottom: 0.8rem;
+            position: relative;
+            padding-left: 1.8rem;
+        }
+        
+        .original-content li::before {
+            content: "•";
+            color: var(--pal-red);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+            font-size: 1.4rem;
+        }
+
+        /* STILI AGGIUNTIVI PER QUESTE SEZIONI */
+        .victims-section {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                        url('https://imgs.search.brave.com/BBNohm1m2XyPJMnZNtT3hMgUjdYEfFHi68jrYjLjK9g/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly93d3cu/dmF0aWNhbm5ld3Mu/dmEvY29udGVudC9k/YW0vdmF0aWNhbm5l/d3MvYWdlbnppZS9p/bWFnZXMvYWZwLzIw/MjUvMDMvMjMvMDkv/MTc0MjcxODE4NTY4/MC5qcGcvX2pjcl9j/b250ZW50L3JlbmRp/dGlvbnMvY3E1ZGFt/LnRodW1ibmFpbC5j/cm9wcGVkLjc1MC40/MjIuanBlZw') no-repeat center/cover;
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+            position: relative;
+        }
+        
+        .victims-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .victim-card {
+            background: rgba(206, 17, 38, 0.8);
+            padding: 2rem;
+            border-radius: 8px;
+            transition: transform 0.3s;
+        }
+        
+        .victim-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .victim-card h3 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .history-section {
+            background-color: #f0f0f0;
+            padding: 4rem 2rem;
+        }
+        
+        .history-container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .decade-tabs {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+        
+        .decade-tab {
+            padding: 0.8rem 1.5rem;
+            background: #ddd;
+            margin: 0.5rem;
+            cursor: pointer;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+        
+        .decade-tab.active {
+            background: var(--pal-red);
+            color: white;
+        }
+        
+        .decade-content {
+            display: none;
+            animation: fadeIn 0.5s;
+        }
+        
+        .decade-content.active {
+            display: block;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Palestina Libera Garfagnana</h1>
+        <p>Informazioni</p>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="chi-siamo.html">Chi Siamo</a></li>
+            <li><a href="azioni.html">Azioni del Gruppo</a></li>
+            <li><a href="social.html">Social</a></li>
+            <li><a href="informazioni.html">Informazioni</a></li>
+        </ul>
+    </nav>
+    <main>
+        <!-- Sezione Vittime Aggiornata -->
+        <section class="victims-section">
+            <h2>IL COSTO UMANO DELL'OCCUPAZIONE</h2>
+            <p class="subtitle">Numeri che gridano giustizia</p>
+            
+            <div class="victims-grid">
+                <div class="victim-card">
+                    <h3>10,000+</h3>
+                    <p>Bambini uccisi dal 2000</p>
+                    <small>Fonte: Defense for Children Palestine</small>
+                </div>
+                
+                <div class="victim-card">
+                    <h3>50,000+</h3>
+                    <p>Minori arrestati dal 1967</p>
+                    <small>Fonte: Addameer</small>
+                </div>
+                
+                <div class="victim-card">
+                    <h3>1,000+</h3>
+                    <p>Scuole bombardate dal 2014</p>
+                    <small>Fonte: UNRWA</small>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sezione Storia Aggiornata -->
+        <section class="history-section">
+            <div class="history-container">
+                <h2>STORIA DELL'OCCUPAZIONE</h2>
+                <p>Una cronologia di espropri e resistenza</p>
+                
+                <div class="decade-tabs">
+                    <div class="decade-tab active" data-decade="1940">1940-49</div>
+                    <div class="decade-tab" data-decade="1950">1950-59</div>
+                    <div class="decade-tab" data-decade="1960">1960-69</div>
+                </div>
+                
+                <div class="decade-content active" id="1940">
+                    <h3>La Nakba (1948)</h3>
+                    <p>750,000 palestinesi espulsi con la forza dalle loro case. 530 villaggi completamente distrutti. 
+                    Nasce il problema dei rifugiati palestinesi che dura fino ad oggi.</p>
+                    <div class="photo-grid">
+                        <img src="https://imgs.search.brave.com/BBNohm1m2XyPJMnZNtT3hMgUjdYEfFHi68jrYjLjK9g/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly93d3cu/dmF0aWNhbm5ld3Mu/dmEvY29udGVudC9k/YW0vdmF0aWNhbm5l/d3MvYWdlbnppZS9p/bWFnZXMvYWZwLzIw/MjUvMDMvMjMvMDkv/MTc0MjcxODE4NTY4/MC5qcGcvX2pjcl9j/b250ZW50L3JlbmRp/dGlvbnMvY3E1ZGFt/LnRodW1ibmFpbC5j/cm9wcGVkLjc1MC40/MjIuanBlZw" alt="Bambino a Gaza">
+                        <img src="https://imgs.search.brave.com/9ADPX5JBF5ztjcGSyvS8i21r0G8kpNdts7RCs7Cv1fM/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly93d3cu/cmFpbmV3cy5pdC9y/ZXNpemVnZC83Njh4/LS9kbC9pbWcvMjAy/My8xMS8yMC8xNzAw/NTE1MTE3MDY5X0FQ/LmpwZw" alt="Bambina in ospedale">
+                    </div>
+                </div>
+                
+                <div class="decade-content" id="1950">
+                    <h3>Gli anni '50</h3>
+                    <p>Continua l'espulsione dei palestinesi mentre si consolida lo stato israeliano.</p>
+                    <div class="photo-grid">
+                        <img src="https://imgs.search.brave.com/KOCbenuLJIGgU3vviV5ToSu0IojAUmPHm0T5eUlbbzg/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly93d3cu/YXZ2ZW5pcmUuaXQv/Yy8vMjAyNC9QdWJs/aXNoaW5nSW1hZ2Vz/LzJiOTgxMWYxNmUw/YzRkODBhNDlhOWJm/MWJkM2YyYWEyL0lN/R180MDQ1LmpwZWc" alt="Scuola distrutta">
+                        <img src="https://imgs.search.brave.com/z_y87G2xcrTV2CFxj1FBRfE-0lSW9nxjDeW2ySe_F1M/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9zdGF0/aWMuZXVyb25ld3Mu/Y29tL2FydGljbGVz/L3N0b3JpZXMvMDkv/MzgvMDcvMDkvODA4/eDUzOV9jbXN2Ml81/M2QyNjBiZi04NDNl/LTU2M2ItOWJkZS0w/YTk5NmZiNzM3Mzkt/OTM4MDcwOS5qcGc" alt="Persone buttate fuori da casa">
+                    </div>
+                </div>
+                
+                <div class="decade-content" id="1960">
+                    <h3>Guerra dei Sei Giorni (1967)</h3>
+                    <p>Occupazione di Cisgiordania, Gaza e Gerusalemme Est. Inizio dell'occupazione militare che persiste oggi.</p>
+                    <div class="photo-grid">
+                        <img src="https://imgs.search.brave.com/X3x5AYdcLACUX7jOgSWSejI74bH1Nqxieip7Hmcox3A/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/b3hmYW1pdGFsaWEu/b3JnL3dwLWNvbnRl/bnQvdXBsb2Fkcy8y/MDI1LzA3L094ZmFt/X2xhdm9yby1kb25u/ZS1wYWxlc3RpbmVz/aS5qcGc" alt="countryside">
+                        <img src="https://imgs.search.brave.com/IUdIboXkQuGK7lMBE4Cnz_zaZKwMrL7jOiiBWSWTw2w/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/dmF0aWNhbm5ld3Mu/dmEvY29udGVudC9k/YW0vdmF0aWNhbm5l/d3MvYWdlbnppZS9p/bWFnZXMvYWZwLzIw/MjUvMDMvMjMvMDkv/MTc0MjcxODE4NTY4/MC5qcGcvX2pjcl9j/b250ZW50L3JlbmRp/dGlvbnMvY3E1ZGFt/LnRodW1ibmFpbC5j/cm9wcGVkLjc1MC40/MjIuanBlZw" alt="casa distrutta">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>Sito sviluppato da Thomas van Arkel (thomasvanarkel00@gmail.com)</p>
+        <p>Sito promosso da Palestina Libera Garfagnana</p>
+    </footer>
+
+    <script>
+        // Script per i tab
+        document.querySelectorAll('.decade-tab').forEach(tab => {
+            tab.addEventListener('click', () => {
+                // Rimuovi active da tutti
+                document.querySelectorAll('.decade-tab, .decade-content').forEach(el => {
+                    el.classList.remove('active');
+                });
+                
+                // Aggiungi active a quello cliccato
+                tab.classList.add('active');
+                document.getElementById(tab.dataset.decade).classList.add('active');
+            });
+        });
+        
+        // Animazione counter
+        const counterElements = document.querySelectorAll('.victim-card h3');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateValue(entry.target, 0, parseInt(entry.target.textContent.replace(/,/g, '')), 2000);
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.5 });
+        
+        counterElements.forEach(el => observer.observe(el));
+        
+        function animateValue(obj, start, end, duration) {
+            let startTimestamp = null;
+            const step = (timestamp) => {
+                if (!startTimestamp) startTimestamp = timestamp;
+                const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+                const value = Math.floor(progress * (end - start) + start);
+                obj.textContent = value.toLocaleString() + (obj.textContent.includes('+') ? '+' : '');
+                if (progress < 1) {
+                    window.requestAnimationFrame(step);
+                }
+            };
+            window.requestAnimationFrame(step);
+        }
+    </script>
+</body>
+</html>
